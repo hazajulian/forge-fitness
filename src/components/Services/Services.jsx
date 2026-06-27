@@ -11,12 +11,12 @@ import {
   FaShieldHeart,
 } from "react-icons/fa6";
 
-import Service1 from "../../assets/Services/servicios-1.png";
-import Service2 from "../../assets/Services/servicios-2.png";
-import Service3 from "../../assets/Services/servicios-3.png";
-import Service4 from "../../assets/Services/servicios-4.png";
-import Service5 from "../../assets/Services/servicios-5.png";
-import Service6 from "../../assets/Services/servicios-6.png";
+import Service1 from "../../assets/services/servicios-1.png";
+import Service2 from "../../assets/services/servicios-2.png";
+import Service3 from "../../assets/services/servicios-3.png";
+import Service4 from "../../assets/services/servicios-4.png";
+import Service5 from "../../assets/services/servicios-5.png";
+import Service6 from "../../assets/services/servicios-6.png";
 
 import "./Services.css";
 
