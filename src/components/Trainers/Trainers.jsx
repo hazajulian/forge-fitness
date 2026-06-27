@@ -6,9 +6,9 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 
-import Trainer1 from "../../assets/Trainers/entrenador-1.png";
-import Trainer2 from "../../assets/Trainers/entrenador-2.png";
-import Trainer3 from "../../assets/Trainers/entrenador-3.png";
+import Trainer1 from "../../assets/trainers/entrenador-1.png";
+import Trainer2 from "../../assets/trainers/entrenador-2.png";
+import Trainer3 from "../../assets/trainers/entrenador-3.png";
 
 import "./Trainers.css";
 

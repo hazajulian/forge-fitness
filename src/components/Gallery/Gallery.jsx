@@ -3,12 +3,12 @@
 
 import { FaCamera, FaArrowRight } from "react-icons/fa6";
 
-import Gallery1 from "../../assets/Gallery/galeria-1.png";
-import Gallery2 from "../../assets/Gallery/galeria-2.png";
-import Gallery3 from "../../assets/Gallery/galeria-3.png";
-import Gallery4 from "../../assets/Gallery/galeria-4.png";
-import Gallery5 from "../../assets/Gallery/galeria-5.png";
-import Gallery6 from "../../assets/Gallery/galeria-6.png";
+import Gallery1 from "../../assets/gallery/galeria-1.png";
+import Gallery2 from "../../assets/gallery/galeria-2.png";
+import Gallery3 from "../../assets/gallery/galeria-3.png";
+import Gallery4 from "../../assets/gallery/galeria-4.png";
+import Gallery5 from "../../assets/gallery/galeria-5.png";
+import Gallery6 from "../../assets/gallery/galeria-6.png";
 
 import "./Gallery.css";
 

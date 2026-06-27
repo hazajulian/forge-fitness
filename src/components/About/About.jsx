@@ -8,7 +8,7 @@ import {
   FaUsers,
 } from "react-icons/fa6";
 
-import AboutImage from "../../assets/About/sobre-nosotros.png";
+import AboutImage from "../../assets/about/sobre-nosotros.png";
 
 import "./About.css";
 
