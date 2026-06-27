@@ -1,0 +1,395 @@
+/* seccion */
+
+.contact {
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* fondo decorativo */
+
+.contact::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top left, rgba(196,154,90,.16), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(196,154,90,.08), transparent 36%);
+
+  pointer-events: none;
+}
+
+/* contenedor */
+
+.contact__container {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: .9fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* contenido */
+
+.contact__content {
+  max-width: 540px;
+}
+
+/* informacion */
+
+.contact__info {
+  display: grid;
+  gap: .9rem;
+
+  margin: 2rem 0;
+}
+
+/* item */
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+
+  padding: 1rem;
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+
+  background: rgba(255,255,255,.05);
+}
+
+/* icono */
+
+.contact__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 14px;
+
+  color: var(--color-dark);
+
+  font-size: 1rem;
+
+  background: var(--color-gold);
+}
+
+/* textos info */
+
+.contact__item h3 {
+  margin: 0 0 .2rem;
+
+  color: var(--color-text-light);
+
+  font-size: .95rem;
+}
+
+.contact__item p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.5;
+}
+
+/* whatsapp */
+
+.contact__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+
+  min-height: 46px;
+  padding: 0 1.3rem;
+
+  border: none;
+  border-radius: 999px;
+
+  color: var(--color-dark);
+
+  font-size: .9rem;
+  font-weight: 800;
+
+  background: var(--color-gold);
+
+  transition:
+    transform var(--transition),
+    background var(--transition);
+}
+
+.contact__whatsapp:hover {
+  transform: translateY(-2px);
+
+  background: var(--color-gold-light);
+}
+
+/* formulario */
+
+.contact__form {
+  display: grid;
+  gap: .9rem;
+
+  padding: 1.6rem;
+
+  border: 1px solid rgba(196,154,90,.28);
+  border-radius: var(--radius-lg);
+
+  background: rgba(255,255,255,.08);
+
+  box-shadow: var(--shadow-dark);
+}
+
+/* campos */
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.contact__field label {
+  color: var(--color-text-light);
+
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* inputs */
+
+.contact__field input,
+.contact__field select,
+.contact__field textarea {
+  width: 100%;
+
+  padding: .9rem 1rem;
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-light);
+
+  font-size: .95rem;
+
+  background: rgba(0,0,0,.24);
+
+  outline: none;
+
+  transition:
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+  color: rgba(247,245,242,.5);
+}
+
+.contact__field input:focus,
+.contact__field select:focus,
+.contact__field textarea:focus {
+  border-color: var(--color-gold);
+
+  background: rgba(0,0,0,.32);
+
+  box-shadow: 0 0 0 3px rgba(196,154,90,.12);
+}
+
+/* select */
+
+.contact__field select {
+  appearance: none;
+
+  padding-right: 2.8rem;
+
+  color: var(--color-text-light);
+
+  background:
+    linear-gradient(45deg, transparent 50%, var(--color-gold) 50%),
+    linear-gradient(135deg, var(--color-gold) 50%, transparent 50%),
+    rgba(0,0,0,.24);
+
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 12px) 50%,
+    0 0;
+
+  background-size:
+    6px 6px,
+    6px 6px,
+    100% 100%;
+
+  background-repeat: no-repeat;
+}
+
+.contact__field select option {
+  color: var(--color-text-light);
+
+  background: var(--color-dark-soft);
+}
+
+.contact__field select option:checked {
+  color: var(--color-dark);
+
+  background: var(--color-gold);
+}
+
+/* textarea */
+
+.contact__field textarea {
+  resize: vertical;
+
+  min-height: 108px;
+}
+
+/* error */
+
+.contact__error {
+  margin: 0;
+
+  padding: .85rem 1rem;
+
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-light);
+
+  font-size: .9rem;
+  font-weight: 700;
+
+  background: rgba(196,154,90,.14);
+}
+
+/* boton */
+
+.contact__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 1.4rem;
+
+  border: none;
+  border-radius: 999px;
+
+  color: var(--color-dark);
+
+  font-size: .86rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  background: var(--color-gold);
+
+  transition:
+    transform var(--transition),
+    background var(--transition);
+}
+
+.contact__button:hover {
+  transform: translateY(-2px);
+
+  background: var(--color-gold-light);
+}
+
+/* exito */
+
+.contact__success {
+  margin: 0;
+
+  padding: .85rem 1rem;
+
+  border: 1px solid rgba(37, 211, 102, .28);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-light);
+
+  font-size: .9rem;
+  font-weight: 700;
+
+  background: rgba(37, 211, 102, .14);
+}
+
+/* notebook */
+
+@media (max-width: 1180px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact__content {
+    max-width: 720px;
+
+    margin-inline: auto;
+
+    text-align: center;
+  }
+
+  .contact__content .sectionText {
+    margin-inline: auto;
+  }
+
+  .contact__form {
+    max-width: 720px;
+    width: 100%;
+
+    margin-inline: auto;
+  }
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+  .contact__info {
+    margin: 1.8rem 0;
+  }
+}
+
+/* celular */
+
+@media (max-width: 560px) {
+  .contact {
+    padding-inline: 1rem;
+  }
+
+  .contact__container {
+    gap: 2rem;
+  }
+
+  .contact__item {
+    align-items: flex-start;
+
+    text-align: left;
+  }
+
+  .contact__whatsapp {
+    width: 100%;
+  }
+
+  .contact__form {
+    padding: 1.3rem;
+  }
+
+  .contact__field textarea {
+    min-height: 105px;
+  }
+
+  .contact__button {
+    width: 100%;
+  }
+}

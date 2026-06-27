@@ -1,0 +1,48 @@
+/* variables globales */
+
+:root {
+  /* colores principales */
+  --color-dark: #0b0b0b;
+  --color-dark-soft: #171717;
+  --color-dark-card: #222222;
+
+  /* colores claros */
+  --color-light: #f8f6f2;
+  --color-cream: #efe8dc;
+  --color-sand: #e3dbcf;
+
+  /* acentos */
+  --color-gold: #c49a5a;
+  --color-gold-light: #d7b175;
+  --color-gold-dark: #9d733f;
+
+  /* textos */
+  --color-text: #121212;
+  --color-text-soft: #5c5c5c;
+  --color-text-light: #f7f5f2;
+  --color-text-muted: #c9c2b8;
+
+  /* bordes y sombras */
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-light: rgba(255, 255, 255, 0.14);
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 22px 60px rgba(0, 0, 0, 0.35);
+
+  /* tipografias */
+  --font-title: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* medidas */
+  --max-width: 1180px;
+  --container-padding: 24px;
+  --section-padding: 110px 24px;
+  --section-padding-mobile: 72px 18px;
+
+  /* bordes */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* transiciones */
+  --transition: 0.25s ease;
+}

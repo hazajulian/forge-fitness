@@ -1,0 +1,286 @@
+/* seccion */
+
+.trainers {
+  position: relative;
+
+  background: var(--color-light);
+}
+
+/* contenedor */
+
+.trainers__container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* encabezado */
+
+.trainers__header {
+  max-width: 690px;
+
+  margin: 0 auto 3.2rem;
+
+  text-align: center;
+}
+
+/* grilla */
+
+.trainers__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+/* tarjeta */
+
+.trainers__card {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: white;
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.trainers__card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(196, 154, 90, .35);
+
+  box-shadow: 0 20px 48px rgba(0, 0, 0, .14);
+}
+
+/* imagen */
+
+.trainers__imageWrapper {
+  overflow: hidden;
+
+  aspect-ratio: 4 / 3.8;
+}
+
+.trainers__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center top;
+
+  transition:
+    transform .45s ease,
+    filter .45s ease;
+}
+
+.trainers__card:hover .trainers__image {
+  transform: scale(1.04);
+
+  filter: brightness(1.04);
+}
+
+/* contenido */
+
+.trainers__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  padding: 1.45rem;
+}
+
+/* nombre */
+
+.trainers__content h3 {
+  margin: 0 0 .32rem;
+
+  color: var(--color-text);
+
+  font-family: var(--font-title);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: .95;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* cargo */
+
+.trainers__role {
+  display: inline-block;
+
+  margin-bottom: .9rem;
+
+  color: var(--color-gold);
+
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+/* descripcion */
+
+.trainers__content p {
+  flex: 1;
+
+  margin: 0;
+
+  color: var(--color-text-soft);
+
+  line-height: 1.6;
+}
+
+/* footer */
+
+.trainers__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .85rem;
+
+  margin-top: 1.4rem;
+}
+
+/* boton */
+
+.trainers__button {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+
+  padding: .8rem 1.15rem;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-weight: 700;
+
+  background: var(--color-dark);
+
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.trainers__button:hover {
+  transform: translateY(-2px);
+
+  background: var(--color-gold);
+}
+
+/* instagram */
+
+.trainers__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  color: var(--color-text);
+
+  font-size: .9rem;
+
+  background: transparent;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.trainers__social:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--color-gold);
+
+  background: var(--color-gold);
+
+  color: white;
+}
+
+/* notebook */
+
+@media (max-width: 1180px) {
+  .trainers__grid {
+    gap: 1.4rem;
+  }
+
+  .trainers__content {
+    padding: 1.4rem;
+  }
+}
+
+/* tablet */
+
+@media (max-width: 900px) {
+  .trainers__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainers__card {
+    max-width: 560px;
+    width: 100%;
+
+    margin-inline: auto;
+  }
+
+  .trainers__imageWrapper {
+    aspect-ratio: 4 / 3.7;
+  }
+}
+
+/* celular */
+
+@media (max-width: 560px) {
+  .trainers {
+    padding-inline: 1rem;
+  }
+
+  .trainers__header {
+    margin-bottom: 2.6rem;
+  }
+
+  .trainers__imageWrapper {
+    aspect-ratio: 4 / 3.75;
+  }
+
+  .trainers__content {
+    padding: 1.4rem;
+  }
+
+  .trainers__content h3 {
+    font-size: 1.8rem;
+  }
+
+  .trainers__footer {
+    flex-direction: column;
+    gap: .85rem;
+
+    align-items: stretch;
+  }
+
+  .trainers__button {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .trainers__social {
+    align-self: center;
+  }
+}

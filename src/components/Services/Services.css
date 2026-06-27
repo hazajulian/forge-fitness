@@ -1,0 +1,271 @@
+/* seccion */
+
+.services {
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* fondo decorativo */
+
+.services::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top left, rgba(196, 154, 90, .12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(196, 154, 90, .08), transparent 35%);
+
+  pointer-events: none;
+}
+
+/* contenedor */
+
+.services__container {
+  position: relative;
+  z-index: 1;
+}
+
+/* header */
+
+.services__header {
+  max-width: 700px;
+
+  margin: 0 auto 3.6rem;
+
+  text-align: center;
+}
+
+/* grilla */
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+/* card */
+
+.services__card {
+  overflow: hidden;
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+
+  background: rgba(255, 255, 255, .04);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+.services__card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(196, 154, 90, .45);
+
+  box-shadow: var(--shadow-dark);
+}
+
+/* imagen */
+
+.services__image {
+  position: relative;
+
+  overflow: hidden;
+
+  aspect-ratio: 16 / 9;
+}
+
+.services__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .5s ease;
+}
+
+.services__card:hover .services__image img {
+  transform: scale(1.06);
+}
+
+/* overlay */
+
+.services__overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, .08) 0%,
+      rgba(0, 0, 0, .65) 100%
+    );
+}
+
+/* icono */
+
+.services__icon {
+  position: absolute;
+  left: 1.35rem;
+  bottom: 1.35rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 17px;
+
+  color: var(--color-dark);
+
+  font-size: 1.3rem;
+
+  background: var(--color-gold);
+
+  box-shadow: 0 12px 26px rgba(196, 154, 90, .32);
+
+  transition:
+    transform .35s ease,
+    background .35s ease;
+}
+
+.services__card:hover .services__icon {
+  transform: scale(1.06);
+
+  background: var(--color-gold-light);
+}
+
+/* contenido */
+
+.services__content {
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+
+  padding: 1.55rem;
+}
+
+.services__content h3 {
+  margin: 0;
+
+  color: var(--color-text-light);
+
+  font-family: var(--font-title);
+  font-size: 1.85rem;
+  font-weight: 400;
+  letter-spacing: .03em;
+  line-height: .95;
+}
+
+.services__content p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+/* link */
+
+.services__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+
+  width: fit-content;
+
+  margin-top: .4rem;
+
+  color: var(--color-gold);
+
+  font-weight: 700;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.services__link svg {
+  transition: transform var(--transition);
+}
+
+.services__link:hover {
+  color: var(--color-gold-light);
+}
+
+.services__link:hover svg {
+  transform: translateX(4px);
+}
+
+/* notebook */
+
+@media (max-width: 1180px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+  .services__header {
+    margin-bottom: 3rem;
+  }
+
+  .services__grid {
+    gap: 1.5rem;
+  }
+
+  .services__content {
+    padding: 1.5rem;
+  }
+
+  .services__content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* celular */
+
+@media (max-width: 560px) {
+  .services {
+    padding-inline: 1rem;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services__content {
+    text-align: center;
+  }
+
+  .services__content p {
+    max-width: 320px;
+
+    margin-inline: auto;
+  }
+
+  .services__link {
+    margin-inline: auto;
+  }
+
+  .services__icon {
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .services__card:hover .services__icon {
+    transform: translateX(-50%) scale(1.06);
+  }
+}
